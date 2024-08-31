@@ -102,4 +102,23 @@ void main() {
   final pessoaMaisNova = listaPessoasOrdenadas.last;
   print(
       'A pessoa mais nova é ${pessoaMaisNova[0]} e tem ${pessoaMaisNova[1]} anos');
+  print('');
+
+  //EXTRA
+  //! 5 - Informe a pessoa com 17 anos
+  print('5 - Informe a pessoa com 17 anos');
+  pessoas.toSet().map((e) => e.split('|')).forEach((item) {
+    if (item.any((e) => e == '17')) {
+      print('${item[0]} tem ${item[1]} anos e é do sexo ${item[2]}');
+    }
+  });
+  print('');
+
+  //! 6 - Informe a pessoa com 3 anos
+  print('6 - Informe a pessoa com 3 anos');
+  pessoasSemDuplicidade.forEach((item) {
+    if (item.any((e) => e == '3')) {
+      print('${item[0]} tem ${item[1]} anos e é do sexo ${item[2]}');
+    }
+  });
 }
