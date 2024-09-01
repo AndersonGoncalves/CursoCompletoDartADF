@@ -121,4 +121,13 @@ void main() {
       print('${item[0]} tem ${item[1]} anos e é do sexo ${item[2]}');
     }
   });
+  print('');
+
+  //! 7 - Transformar a lista em um map com os nomes e sexo em maiusculo
+  print('7 - Transformar a lista em um map com os nomes e sexo em maiusculo');
+  final pessoasMaiuscula = pessoas.asMap().map((key, value) {
+    return MapEntry(key, value.toUpperCase());
+  });
+  pessoasMaiuscula.forEach((key, value) => print('$key : $value'));
+  print('');
 }
